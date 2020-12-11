@@ -15,6 +15,6 @@ module.exports = {
   // `package is not distributed in a web-friendly format. You should\n` +
   // `open an issue in its repo, or look for a modern alternative.`
   optimizeDeps: {
-    // exclude: ['express']
+    exclude: ['express']
   }
 }
