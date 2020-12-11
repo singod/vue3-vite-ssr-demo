@@ -1,0 +1,22 @@
+{
+  "name": "vite-ssr-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --open",
+    "prebuild": "rm -rf dist",
+    "build": "vite-ssr build",
+    "postbuild": "rm -rf dist/client/index.html",
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "vue": "^3.0.4",
+    "vue-router": "^4.0.1",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "vite": "^1.0.0-rc.13",
+    "vite-ssr": "^0.0.12"
+  }
+}
