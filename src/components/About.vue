@@ -1,23 +1,21 @@
-
 <template>
   <h1>About页面</h1>
+  {{ num }}
 </template>
 
-<script>
-export default {
-  name: 'about',
-  props: {
-    msg: String,
-  },
-  mounted() {
-    this.randomNumber = Math.random()
-  },
-  data() {
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { ref, reactive } from 'vue';
+
+export default defineComponent({
+  setup() {
+    const num = ref(0);
+    const book = reactive({ title: 'Vue 3 Guide' });
+    console.log(book.title);
     return {
-      randomNumber: 0,
-      initialized: false,
-      count: 0,
-    }
+      num,
+      book,
+    };
   },
-}
+});
 </script>

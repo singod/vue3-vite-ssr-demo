@@ -3,19 +3,30 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --open",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rimraf -rf dist",
     "build": "vite-ssr build",
-    "postbuild": "rm -rf dist/client/index.html",
-    "start": "node server"
+    "postbuild": "rimraf -rf dist/client/index.html",
+    "start": "node server",
+    "lint": "eslint --fix --ext .ts,.vue src"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "rimraf": "^3.0.2",
     "vue": "^3.0.4",
     "vue-router": "^4.0.1",
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
     "@vue/compiler-sfc": "^3.0.4",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-vue": "^7.2.0",
+    "less": "^3.13.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3",
     "vite": "^1.0.0-rc.13",
     "vite-ssr": "^0.0.12"
   }

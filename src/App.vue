@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img src="./assets/logo.png" alt="Vue logo" />
   <nav>
-    <router-link to="/">home</router-link> | 
-    <router-link to="/about">about</router-link>
+    <router-link to="/">
+      <span>home</span>
+    </router-link>
+    |
+    <router-link to="/about">
+      <span>about</span>
+    </router-link>
   </nav>
   <router-view v-slot="{ Component }">
     <component :is="Component" />
   </router-view>
 </template>
 
-<script>
-export default {
-  name: 'App',
-}
-</script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 
+export default defineComponent({
+  mounted() {
+    console.log('app mounted');
+  },
+});
+</script>
